@@ -1,6 +1,6 @@
 
 <!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-![Poster](https://imgur.com/a/xTmci5e)
+![Poster](https://i.imgur.com/MAAMCPP.jpg)
 
 <!-- Maybe a table of contents here? 📚 -->
 
