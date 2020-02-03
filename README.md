@@ -19,16 +19,27 @@ Clone this repo and open index.html in your browser
 # Features
 
 # Data (API)
+The API is made available by the people of Swapi. 
+Special credits go to: [Paul Hallet](https://phalt.co/?ref=swapi)
+
+The API can be used via the root URL: https://swapi.co/api/
+
+## What is it?
+The Star Wars API, or "swapi" (Swah-pee) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe!
+
+We've taken all the rich contextual stuff from the universe and formatted into something easier to consume with software. Then we went and stuck an API on the front so you can access it all!
+
+
 
 # Resources
+[API](swapi.co)
 
 # License 
 MIT
 
 # Disclaimer
+Star Wars and all associated names are copyright Lucasfilm ltd.
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+This API is open source and carries a BSD licence .
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+All data has been freely collected from open sources such as Wookiepedia.
