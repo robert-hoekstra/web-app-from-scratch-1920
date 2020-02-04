@@ -22,7 +22,10 @@ fetch('https://swapi.co/api/')
       console.log(err)
     });
 // Retrieve data from selected value
-selection.onchange = getData;
+selection.onchange = getData, removeData;
+function removeData(){
+  
+}
 function getData(){
   var value = this.value
   console.log(value);
@@ -38,11 +41,39 @@ fetch('https://swapi.co/api/' + value)
   // Declare variables
   let items = myJson.results
   console.log(items)
+  collection.remove
+  // newItems = items.filter(item => { console.log(item.key)})
+  // console.log(newItems, 'aaaaaaaaaa')
+  
   items.forEach(element => {
-    collection.insertAdjacentHTML('beforeend', `<p>${stringify(element)}</p>`)
+  
+    collection.insertAdjacentHTML('afterbegin', `<section id="${element}"></section>`)
+    let placeholder = document.getElementById(element)
+
+    // collection.insertAdjacentHTML('beforeend',`<p>${JSON.stringify(element)}</p>`)
+    Object.entries(element).forEach(([key, value]) => {
+     if((key !== "homeworld") ||(key !== "people")||( key !==  "url")){
+      return placeholder.insertAdjacentHTML('beforeend', `<li>${key}: ${value}</li>`)
+    }})
   });
   });
 } 
 
+// function makeElement(element){
+//   return document.createElement(element)
+// }
+// function creatLi(element, content){
+//   let li = document.createElement(element)
+//   li.innerText= content
+//   return li
+// }
+// function appendElemnten(element, parentelement){
+//   return parentelement.appendChild(element)
+// }
 
 
+
+// let ul = makeElement("ul")
+// let films = creatLi("li", item.films)
+// ul.appendChild(films)
+// collection.appendChild(ul)

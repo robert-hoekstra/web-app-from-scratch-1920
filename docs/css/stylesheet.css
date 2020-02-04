@@ -13,4 +13,17 @@ body{
 
 span{
     display: block;
+    text-transform: capitalize;
+}
+
+#collection{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+}
+
+li{
+    max-width: 300px;
 }
