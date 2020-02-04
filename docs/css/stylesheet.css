@@ -1,0 +1,16 @@
+*{
+    color: white;
+}
+
+body{
+    background: #000;
+}
+
+
+#categorySelect{
+    text-transform: capitalize;
+}
+
+span{
+    display: block;
+}
