@@ -35,7 +35,7 @@ function removeData() {
 }
 function getData(parameter) {
   // collection.innerHTML = "";
-  var value = parameter.value;
+  let value = parameter.value;
   console.log(value);
 
   fetch("https://swapi.co/api/" + value)
