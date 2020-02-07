@@ -32,7 +32,7 @@ We've taken all the rich contextual stuff from the universe and formatted into s
 
 
 # Resources
-[API](swapi.co)
+[API](https://swapi.co/)
 
 # License 
 MIT
