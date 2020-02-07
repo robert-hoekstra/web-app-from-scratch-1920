@@ -66,7 +66,7 @@ function getData(parameter) {
         collection.insertAdjacentHTML(
           "afterbegin",
           `<section id="${element}">
-          <img src="https://picsum.photos/400" alt="random picture"></section>`
+          <img src="http://www.facetheforce.today/random/400?r=${getRandomInt(30)}"></section>`
         );
         let placeholder = document.getElementById(element);
 
@@ -79,6 +79,10 @@ function getData(parameter) {
         });
       });
     });
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
 // function makeElement(element){
