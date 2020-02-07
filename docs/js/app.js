@@ -65,14 +65,16 @@ function getData(parameter) {
         
         collection.insertAdjacentHTML(
           "afterbegin",
-          `<section id="${element}"></section>`
+          `<section id="${element}">
+          <img src="https://picsum.photos/400" alt="random picture"></section>`
         );
         let placeholder = document.getElementById(element);
 
         Object.entries(element).forEach(([key, value]) => {
           placeholder.insertAdjacentHTML(
             "beforeend",
-            `<li>${key}: ${value}</li>`
+            `<li>${key.toUpperCase(key)}: ${value}</li>`
+            
           );
         });
       });
