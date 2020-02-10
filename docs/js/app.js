@@ -2,6 +2,7 @@ let button = document.querySelector("#button");
 let selection = document.getElementById("categorySelect");
 let collection = document.getElementById("collection");
 
+// Giphy
 
 // fetch data
 fetch("https://swapi.co/api/")
@@ -23,15 +24,15 @@ fetch("https://swapi.co/api/")
     console.log(err);
   });
 // Retrieve data from selected value
-(selection.onchange = removeData);
+selection.onchange = removeData;
+
+// https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
 function removeData() {
   let myNode = document.getElementById("collection");
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
-
   }
-  return getData(this)
-
+  return getData(this);
 }
 function getData(parameter) {
   // collection.innerHTML = "";
@@ -47,7 +48,7 @@ function getData(parameter) {
       // Declare variables
       let items = myJson.results;
       console.log(Object.entries(items));
-    
+
       items.forEach(element => {
         delete element.homeworld;
         delete element.url;
@@ -62,21 +63,39 @@ function getData(parameter) {
         delete element.species;
         delete element.pilots;
         delete element.residents;
-        
-        collection.insertAdjacentHTML(
-          "afterbegin",
-          `<section id="${element}">
-          <img src="http://www.facetheforce.today/random/400?r=${getRandomInt(30)}"></section>`
-        );
-        let placeholder = document.getElementById(element);
 
-        Object.entries(element).forEach(([key, value]) => {
-          placeholder.insertAdjacentHTML(
-            "beforeend",
-            `<li>${key.toUpperCase(key)}: ${value}</li>`
-            
-          );
-        });
+        let searchParamater = Object.values(element)[0];
+        let url = fetch(
+          "http://api.giphy.com/v1/gifs/search?q=" +
+            searchParamater +
+            "&api_key=LbgPba4AyUN7TJegTW04LfSc1zAhl8Z5&limit=1"
+        );
+
+        // Met hulp van Tomas Stolp voor fetch chain
+        url
+          .then(response => {
+            return response.json();
+          })
+          .then(json => {
+            console.log(json.data[0].images.original.url);
+            data = json.data[0].images.original.url;
+            console.log(data);
+            return data;
+          })
+          .then(data => {
+            collection.insertAdjacentHTML(
+              "afterbegin",
+              `<section id="${element}">
+          <img src="${data}"></section>`
+            );
+            let placeholder = document.getElementById(element);
+            Object.entries(element).forEach(([key, value]) => {
+              placeholder.insertAdjacentHTML(
+                "beforeend",
+                `<li>${key.toUpperCase(key)}: ${value}</li>`
+              );
+            });
+          });
       });
     });
 }
