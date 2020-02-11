@@ -41,6 +41,17 @@ The Star Wars API, or "swapi" (Swah-pee) is the world's first quantified and pro
 
 We've taken all the rich contextual stuff from the universe and formatted into something easier to consume with software. Then we went and stuck an API on the front so you can access it all!
 
+# Diagrams
+Part of the course is to draw diagrams that explain all the modules and functions that are used within the application. Their placement and how the user interact with them. So we end up with two diagrams.
+* Actor Diagram
+* Resources
+
+## Actor Diagram
+![actorDiagram](https://user-images.githubusercontent.com/45421908/74228307-7b0b6e80-4cc0-11ea-87d5-1ed1565ca808.png)
+
+## Interaction Diagram
+Here comes the interaction diagram
+
 
 # Resources
 [Swapi API](https://swapi.co/)

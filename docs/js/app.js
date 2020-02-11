@@ -48,7 +48,7 @@ function getData(parameter) {
       // Declare variables
       let items = myJson.results;
       console.log(Object.entries(items));
-
+// Delete properties that are not needed
       items.forEach(element => {
         delete element.homeworld;
         delete element.url;
