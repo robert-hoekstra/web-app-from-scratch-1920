@@ -1,4 +1,4 @@
-let button = document.querySelector("#button");
+
 let selection = document.getElementById("categorySelect");
 let collection = document.getElementById("collection");
 
@@ -9,37 +9,33 @@ fetch("https://swapi.co/api/")
   .then(response => {
     return response.json();
   })
-  .then(myJson => {
-    console.log(myJson);
-    // Declare variables
-    let categories = Object.keys(myJson);
-    categories.forEach(element => {
-      selection.insertAdjacentHTML(
-        "beforeend",
-        `<option value="${element}"> ${element}</option>`
-      );
-    });
-  })
+  .then(myJson => renderCards(myJson))
+  // .then(renderCards => removeData(renderCards))
   .catch(err => {
     console.log(err);
   });
 // Retrieve data from selected value
-selection.onchange = removeData;
+// selection.onchange = removeData;
+
+selection.addEventListener('change', function(){
+  removeData()
+  getData(this.value)
+})
 
 // https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
-function removeData() {
+ function removeData() {
   let myNode = document.getElementById("collection");
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
   }
-  return getData(this);
 }
-function getData(parameter) {
-  // collection.innerHTML = "";
-  let value = parameter.value;
-  console.log(value);
 
-  fetch("https://swapi.co/api/" + value)
+function getData(parameter) {
+  collection.innerHTML = "";
+
+  console.log('this: ', parameter)
+
+  fetch("https://swapi.co/api/" + parameter)
     .then(response => {
       return response.json();
     })
@@ -78,7 +74,7 @@ function getData(parameter) {
           })
           .then(json => {
             console.log(json.data[0].images.original.url);
-            data = json.data[0].images.original.url;
+            let data = json.data[0].images.original.url;
             console.log(data);
             return data;
           })
@@ -86,7 +82,7 @@ function getData(parameter) {
             collection.insertAdjacentHTML(
               "afterbegin",
               `<section id="${element}">
-          <img src="${data}"></section>`
+          <a href="#/${searchParameter.replace(/\s+/g, '')}"><img src="${data}"></section></a>`
             );
             let placeholder = document.getElementById(element);
             Object.entries(element).forEach(([key, value]) => {
@@ -100,9 +96,6 @@ function getData(parameter) {
     });
 }
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
 
 // function makeElement(element){
 //   return document.createElement(element)
@@ -119,4 +112,41 @@ function getRandomInt(max) {
 // let ul = makeElement("ul")
 // let films = creatLi("li", item.films)
 // ul.appendChild(films)
-// collection.appendChild(ul)
+// collection.appendChild(ul
+
+
+function renderCards(myJson){
+
+    console.log('renderCards function: ', myJson);
+    // Declare variables
+    let categories = Object.keys(myJson);
+    categories.forEach(element => {
+      selection.insertAdjacentHTML(
+        "beforeend",
+        `<option value="${element}"> ${element}</option>`
+      );
+    });
+
+
+}
+
+var detail = function (stringParam) {extraInformation(stringParam)};
+var about = function () { removeData(), console.log("aboutpagina"); };
+var credit = function () { removeData(), console.log("creditpagina")};
+
+var routes = {
+  '/about': about,
+  '/credit': credit,
+  '/:stringParam': detail,
+  }
+
+var router = Router(routes);
+console.log("Director loaded")
+
+router.init();
+
+function extraInformation(stringParam){
+  removeData()
+  console.log(stringParam)
+}
+

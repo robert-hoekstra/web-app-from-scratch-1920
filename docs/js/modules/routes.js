@@ -1,19 +1,16 @@
-var author = function () { console.log("author"); };
-var books = function () { console.log("books"); };
-var viewBook = function (bookId) {
-  console.log("viewBook: bookId is populated: " + bookId);
-};
+var detail = function (stringParam) { console.log(stringParam)};
+var about = function () { removeData(), console.log("aboutpagina"); };
+var credit = function () { removeData(), console.log("creditpagina")};
 
 var routes = {
-  '/author': author,
-  '/books': [books, function() {
-    console.log("An inline route handler.");
-  }],
-  '/books/view/:bookId': viewBook,
-  
-};
+  '/about': about,
+  '/credit': credit,
+  '/:stringParam': detail,
+  }
 
 var router = Router(routes);
 console.log("Director loaded")
 
 router.init();
+
+
