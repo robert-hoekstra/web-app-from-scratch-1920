@@ -3,6 +3,21 @@
 ![Poster](https://i.imgur.com/43oKlKs.jpg)
 
 <!-- Maybe a table of contents here? 📚 -->
+# Table of Contents
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+  * [Installation](#installation)
+  * [First Steps](#first-steps)
+- [Features](#features)
+- [Data (API)](#data--api-)
+  * [What is it?](#what-is-it-)
+- [Diagrams](#diagrams)
+  * [Actor Diagram](#actor-diagram)
+  * [Interaction Diagram](#interaction-diagram)
+- [Resources](#resources)
+- [License](#license)
+- [Disclaimer](#disclaimer)
+
 
 # Introduction
 "Star Wars - a Galactic web app" is a online tool and product made for educational purposes only. It is a project that is part of the web development minor taken in Amsterdam in 2020. The core of the project is to make a single page web application written in vanilla HTML, CSS & JavaScript. Part of the project is to retrieve an API and use it's data.
