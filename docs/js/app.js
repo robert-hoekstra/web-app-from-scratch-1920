@@ -64,15 +64,15 @@ function getData(parameter) {
         delete element.pilots;
         delete element.residents;
 
-        let searchParamater = Object.values(element)[0];
-        let url = fetch(
-          "http://api.giphy.com/v1/gifs/search?q=" +
-            searchParamater +
+        let searchParameter = Object.values(element)[0];
+        let gliphy = fetch(
+          "https://api.giphy.com/v1/gifs/search?q=" +
+            searchParameter +
             "&api_key=LbgPba4AyUN7TJegTW04LfSc1zAhl8Z5&limit=1"
         );
 
         // Met hulp van Tomas Stolp voor fetch chain
-        url
+        gliphy
           .then(response => {
             return response.json();
           })

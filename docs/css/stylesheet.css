@@ -89,7 +89,8 @@ main h2{
 	display: none;
 }
 #categorySelect:hover {
-	border-color: #888;
+    border-color: #888;
+    
 }
 #categorySelect:focus {
 	border-color: #aaa;
@@ -99,7 +100,7 @@ main h2{
 	outline: none;
 }
 #categorySelect option {
-	font-weight:normal;
+    font-weight:normal;
 }
 
 span{
@@ -152,3 +153,11 @@ img{
 img:hover{
     
 }
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #05204277;
+    width: 100%;
+}
+

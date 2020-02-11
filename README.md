@@ -15,8 +15,20 @@
 Clone this repo and open index.html in your browser
 
 ## First Steps
+Boot up the website by navigating to [Star Wars Explorer](https://robert-hoekstra.github.io/web-app-from-scratch-1920).
+
+Wait until the application is fully loaded. Note: if the dropdown menu shows no options then the application is not fully loaded. 
+
+When the options are shown. Choose one option to epxlore your first items within that category!
+
+Interact with one of the objects to learn even more about it on the detail page.
 
 # Features
+* Navigate through the Swapi.co API.
+* Retrieve animated GIFs based on objects from the Swapi.co.
+* Routing to enhance single-page web application experience.
+* Templating Engine to create sections within a page.
+
 
 # Data (API)
 The API is made available by the people of Swapi. 
@@ -30,9 +42,11 @@ The Star Wars API, or "swapi" (Swah-pee) is the world's first quantified and pro
 We've taken all the rich contextual stuff from the universe and formatted into something easier to consume with software. Then we went and stuck an API on the front so you can access it all!
 
 
-
 # Resources
-[API](https://swapi.co/)
+[Swapi API](https://swapi.co/)
+[Gliphy API](https://developers.giphy.com/)
+[Director Routing](https://github.com/flatiron/director)
+
 
 # License 
 MIT
