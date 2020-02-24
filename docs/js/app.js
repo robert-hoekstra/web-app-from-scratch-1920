@@ -23,15 +23,15 @@ selection.addEventListener('change', function(){
 })
 
 // https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
- function removeData() {
-  let myNode = document.getElementById("collection");
-  while (myNode.firstChild) {
-    myNode.removeChild(myNode.firstChild);
+   function removeData() {
+  let htmlParent = document.getElementById("collection");
+  while (htmlParent.firstChild) {
+    htmlParent.removeChild(htmlParent.firstChild);
   }
 }
 
 function getData(parameter) {
-  collection.innerHTML = "";
+  // collection.innerHTML = "";
 
   console.log('this: ', parameter)
 
@@ -148,5 +148,36 @@ router.init();
 function extraInformation(stringParam){
   removeData()
   console.log(stringParam)
+
+
+  collection.insertAdjacentHTML(
+    "afterbegin",
+    `<h1>Details: ${stringParam}</h1>`
+  )
+  let gliphy = fetch(
+    "https://api.giphy.com/v1/gifs/search?q=" + stringParam + "&api_key=LbgPba4AyUN7TJegTW04LfSc1zAhl8Z5&limit=20")
+
+    gliphy
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+      let data = json.data;
+      console.log(data);
+      return data;
+    })
+
+    .then(data => {
+      console.log(data)
+      data.map(item=> {
+      collection.insertAdjacentHTML(
+        "beforeend",
+        `<section>
+    <img src="${item.images.original.url}"></section>`
+      );
+    });
+  })
+
+  console.log(gliphy)
 }
 
