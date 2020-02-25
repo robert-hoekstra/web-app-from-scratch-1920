@@ -2,59 +2,63 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta name="title" content="Star Wars - A galactic web app">
-        <meta name="description" content="A single page web application to rule and explore the universe of the Star Wars galaxy">
-        <meta name="keywords" content="Star wars, API, explore">
-        <meta name="robots" content="index, follow">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="language" content="English">
-        <meta name="author" content="Robert F. Hoekstra">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/stylesheet.css">
-        <script src="js/modules/director.min.js"></script>
-    </head>
-    <body>
-        <div id="container">
-            <div id="app">
-                <header>
-                    <h1 class="mainTitle">Star Wars</h1>
-                    <h2 class="subTitle">The Galaxy Explorer</h2>
-                </header>
-                <main class="search">
-                    <h2>Choose a category</h2>
-                    <select id="categorySelect" name="category">
-                    </select>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
 
+  <head>
+    <meta name="title" content="Star Wars - A galactic web app" />
+    <meta
+      name="description"
+      content="A single page web application to rule and explore the universe of the Star Wars galaxy"
+    />
+    <meta name="keywords" content="Star wars, API, explore" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Robert F. Hoekstra" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <script src="js/modules/director.min.js"></script>
+  </head>
 
-                </main>
+  <body>
+    <div id="container">
+      <div id="app">
+        <header>
+          <h1 class="mainTitle">Star Wars</h1>
+          <h2 class="subTitle">The Galaxy Explorer</h2>
+        </header>
+        <main class="search">
+          <h2>Choose a category</h2>
+          <select id="categorySelect" name="category"> </select>
+        </main>
 
-                <main>
-                    <section id="collection">
+        <main>
+          <section id="collection"></section>
+        </main>
+      </div>
+    </div>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
 
-                    </section>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/modules/api.js"></script>
+    <script type="module" src="js/modules/routes.js"></script>
+    <script type="module" src="js/modules/dom.js"></script>
+    <script type="module" src="js/modules/retrieve.js"></script>
+    <script type="module" src="js/modules/director.min.js"></script>
 
-                    
-
-
-
-                </main>
-
-            </div>
-        </div>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script type="module" src="js/app.js"></script>
-
-        <footer>
-            <ul>
-                <li><a href="#/detail">#/detail</a></li>
-                <li><a href="#/about">#/about</a></li>
-                <li><a href="#/credit">#/credit</a></li>
-          </ul>
-        </footer>
-    </body>
+    <footer>
+      <ul>
+        <li><a href="#/detail">#/detail</a></li>
+        <li><a href="#/about">#/about</a></li>
+        <li><a href="#/credit">#/credit</a></li>
+      </ul>
+    </footer>
+  </body>
 </html>
