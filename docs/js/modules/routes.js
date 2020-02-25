@@ -1,16 +1,28 @@
-var detail = function (stringParam) { removeData(), console.log(stringParam), renderCards()};
-var about = function () { removeData(), console.log("aboutpagina"); };
-var credit = function () { removeData(), console.log("creditpagina")};
+import retrieve from "/js/modules/retrieve.js"
+import dom from "/js/modules/dom.js"
 
-var routes = {
-  '/about': about,
-  '/credit': credit,
-  '/:stringParam': detail,
-  }
+function create() {
+  var detail = function(stringParam) {
+    retrieve.Information(stringParam);
+  };
+  var about = function() {
+    dom.remove(), console.log("aboutpagina");
+  };
+  var credit = function() {
+    dom.remove(), console.log("creditpagina");
+  };
 
-var router = Router(routes);
-console.log("Director loaded")
+  var routes = {
+    "/about": about,
+    "/credit": credit,
+    "/:stringParam": detail
+  };
 
-router.init();
+  var router = Router(routes);
+  console.log("Director loaded");
+
+  router.init();
+}
 
 
+export default {create}
