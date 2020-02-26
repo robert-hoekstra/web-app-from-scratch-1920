@@ -46,15 +46,23 @@ Interact with one of the objects to learn even more about it on the detail page.
 
 
 # Data (API)
+## Swapi
 The API is made available by the people of Swapi. 
 Special credits go to: [Paul Hallet](https://phalt.co/?ref=swapi)
 
 The API can be used via the root URL: https://swapi.co/api/
-
-## What is it?
+### What is it?
 The Star Wars API, or "swapi" (Swah-pee) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe!
 
 We've taken all the rich contextual stuff from the universe and formatted into something easier to consume with software. Then we went and stuck an API on the front so you can access it all!
+
+## Gliphy
+The API for the images is made available by Gliphy.
+You can find everything about the API at [Gliphy for Dev's](https://developers.giphy.com/)
+
+### What is it?
+Gliphy is a platform that collects and distributes animated gifs for everyone to see and use.
+This application gets the first property from the swapi objects and sends it to gliphy. Then the very first image that is found by gliphy is returned and rendered into the DOM. In that way we enrich the Swapi API by adding images!
 
 # Diagrams
 Part of the course is to draw diagrams that explain all the modules and functions that are used within the application. Their placement and how the user interact with them. So we end up with two diagrams.
@@ -68,12 +76,10 @@ Part of the course is to draw diagrams that explain all the modules and function
 ![interactionDiagram](https://user-images.githubusercontent.com/45421908/74236523-acd90100-4cd1-11ea-90e9-5254a309f7ad.png)
 
 
-
 # Resources
 [Swapi API](https://swapi.co/)
 [Gliphy API](https://developers.giphy.com/)
 [Director Routing](https://github.com/flatiron/director)
-
 
 # License 
 MIT
