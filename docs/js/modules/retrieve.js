@@ -11,7 +11,7 @@ function Navigation() {
   }
   
   function Information(stringParam) {
-    dom.remove();
+    dom.Remove();
     console.log(stringParam);
   
     collection.insertAdjacentHTML(
@@ -69,8 +69,13 @@ function Navigation() {
         // Declare variables
         let items = myJson.results;
         console.log(Object.entries(items));
+
+        let sortedByName = items.sort(sort.ByName)
+        console.log("Sorted by name", sortedByName)
+
+
         // Delete properties selectedSubject are not needed
-        items.forEach(element => {
+        sortedByName.forEach(element => {
           delete element.homeworld;
           delete element.url;
           delete element.people;
@@ -84,6 +89,7 @@ function Navigation() {
           delete element.species;
           delete element.pilots;
           delete element.residents;
+
   
           let searchParameter = Object.values(element)[0];
   
@@ -101,7 +107,6 @@ function Navigation() {
             .then(json => {
               console.log(json.data[0].images.original.url);
               let data = json.data[0].images.original.url;
-              console.log(data);
               return data;
             })
             .then(data => {
@@ -129,3 +134,4 @@ function Navigation() {
 
   import renderCards from "/js/modules/render.js"
   import dom from "/js/modules/dom.js"
+  import sort from "/js/modules/sort.js"

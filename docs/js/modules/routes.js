@@ -1,21 +1,26 @@
 import retrieve from "/js/modules/retrieve.js"
 import dom from "/js/modules/dom.js"
 
-function create() {
+function Create() {
   var detail = function(stringParam) {
-    retrieve.Information(stringParam);
+    retrieve.Information(stringParam), console.log(stringParam);
   };
   var about = function() {
-    dom.remove(), console.log("aboutpagina");
+    dom.Remove(), console.log("aboutpagina");
   };
   var credit = function() {
-    dom.remove(), console.log("creditpagina");
+    dom.Remove(), console.log("creditpagina");
   };
+
+  var notFound = function() {
+    dom.Remove()
+  }
 
   var routes = {
     "/about": about,
     "/credit": credit,
-    "/:stringParam": detail
+    "/:stringParam": detail,
+    "/:*": notFound 
   };
 
   var router = Router(routes);
@@ -25,4 +30,4 @@ function create() {
 }
 
 
-export default {create}
+export default {Create}
