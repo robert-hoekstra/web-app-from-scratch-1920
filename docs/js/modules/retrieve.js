@@ -1,3 +1,7 @@
+import renderCards from "./render.js"
+import dom from "./dom.js"
+import sort from "./sort.js"
+
 function Navigation() {
     fetch("https://swapi.co/api/")
       .then(response => {
@@ -132,6 +136,3 @@ function Navigation() {
 
   export default {Navigation, Information, Items, Data}
 
-  import renderCards from "/js/modules/render.js"
-  import dom from "/js/modules/dom.js"
-  import sort from "/js/modules/sort.js"

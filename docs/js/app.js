@@ -1,6 +1,8 @@
-import retrieve from "/js/modules/retrieve.js";
-import routes from "/js/modules/routes.js";
-import dom from "/js/modules/dom.js";
+import retrieve from "./modules/retrieve.js";
+import routes from "./modules/routes.js";
+
+import dom from './modules/dom.js'
+
 startApp();
 
 function startApp() {

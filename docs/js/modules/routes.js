@@ -1,5 +1,5 @@
-import retrieve from "/js/modules/retrieve.js"
-import dom from "/js/modules/dom.js"
+import retrieve from "./retrieve.js"
+import dom from "./dom.js"
 
 function Create() {
   var detail = function(stringParam) {
