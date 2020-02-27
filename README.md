@@ -1,4 +1,4 @@
-[![Image from Gyazo](https://i.gyazo.com/3ce248b1999eab34d8a1978f94f3ce77.gif)](https://gyazo.com/3ce248b1999eab34d8a1978f94f3ce77)
+![poster](https://i.gyazo.com/3ce248b1999eab34d8a1978f94f3ce77.gif)
 <!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
 ![Poster](https://i.imgur.com/43oKlKs.jpg)
 
