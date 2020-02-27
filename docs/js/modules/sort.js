@@ -4,7 +4,7 @@ function byAverageHeight(a, b){
 }
 
 function byName(a, b){
-    var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()  // Javascript maakt onderscheid tussen A en a. 
+    let nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()  // Javascript maakt onderscheid tussen A en a. 
     if (nameA < nameB)
         return -1 
     if (nameA > nameB)
