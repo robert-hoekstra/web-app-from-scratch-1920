@@ -82,19 +82,8 @@ function Items(parameter) {
         return mammals.classification === "mammal";
       });
 
+      // https://stackoverflow.com/questions/1960473/get-all-unique-values-in-a-javascript-array-remove-duplicates <-- best answer
       let uniqueClassifications = Array.from(new Set(dataByClassification));
-      // console.log("filter", mammals)
-      // console.log("reduce", totalHeight)
-      // console.log("map", dataByClassification)
-
-      //Insert facts to DOM
-      collection.insertAdjacentHTML(
-        "beforebegin",
-        `<ul><li>${sortedData.length} Species found!</li> <li>${
-          uniqueClassifications.length
-        } Unique families with an average height of ${totalHeight /
-          10}m</li><li>Of which ${mammals.length} Mammals!</li><ul>`
-      );
 
       // Delete properties selected Subjects are not needed
       sortedData.forEach(element => {
@@ -147,6 +136,16 @@ function Items(parameter) {
             });
           });
       });
+      //Insert facts to DOM
+      collection.insertAdjacentHTML(
+        "beforeend",
+        `<ul id="speciesdata"><li>${
+          sortedData.length
+        } Species found!</li> <li>${
+          uniqueClassifications.length
+        } Unique families with an average height of ${totalHeight /
+          10}m</li><li>Of which ${mammals.length} Mammals!</li><ul>`
+      );
     });
 }
 

@@ -2,28 +2,28 @@ import retrieve from "./retrieve.js"
 import dom from "./dom.js"
 
 function Create() {
-  var detail = function(stringParam) {
+  let detail = function(stringParam) {
     retrieve.Information(stringParam), console.log(stringParam);
   };
-  var about = function() {
+  let about = function() {
     dom.Remove(), console.log("aboutpagina");
   };
-  var credit = function() {
+  let credit = function() {
     dom.Remove(), console.log("creditpagina");
   };
 
-  var notFound = function() {
+  let notFound = function() {
     dom.Remove()
   }
 
-  var routes = {
+  let routes = {
     "/about": about,
     "/credit": credit,
     "/:stringParam": detail,
     "/:*": notFound 
   };
 
-  var router = Router(routes);
+  let router = Router(routes);
   console.log("Director loaded");
 
   router.init();
