@@ -67,8 +67,8 @@ Part of the course is to draw diagrams that explain all the modules and function
 * Actor Diagram
 * Resources
 
-## Actor Diagram
-![actorDiagram](https://user-images.githubusercontent.com/45421908/74228307-7b0b6e80-4cc0-11ea-87d5-1ed1565ca808.png)
+## Actor Diagram (updated 28-2-2020)
+![actorDiagram](https://user-images.githubusercontent.com/45421908/75520701-73f59780-5a06-11ea-8580-d9b4befea4e2.png)
 
 ## Interaction Diagram
 ![interactionDiagram](https://user-images.githubusercontent.com/45421908/74236523-acd90100-4cd1-11ea-90e9-5254a309f7ad.png)
