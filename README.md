@@ -71,8 +71,9 @@ Part of the course is to draw diagrams that explain all the modules and function
 ![actorDiagram (1)](https://user-images.githubusercontent.com/45421908/75520911-e9616800-5a06-11ea-93cf-12dc988f9acd.png)
 
 
-## Interaction Diagram
-![interactionDiagram](https://user-images.githubusercontent.com/45421908/74236523-acd90100-4cd1-11ea-90e9-5254a309f7ad.png)
+## Interaction Diagram (updated 28-2-2020)
+![interactionDiagramDetail](https://user-images.githubusercontent.com/45421908/75522019-33e3e400-5a09-11ea-83d5-1d8ac4940966.png)
+
 
 
 # Resources
