@@ -1,18 +1,17 @@
 import retrieve from "./modules/retrieve.js";
-import routes from "./modules/routes.js";
-
+import router from "./modules/router.js";
 import dom from './modules/dom.js'
 
 startApp();
 
 function startApp() {
-  routes.Create();
-  retrieve.Navigation();
+  router.SetRoutes();
+  retrieve.NavigationList();
 
   let selection = document.getElementById("categorySelect");
   selection.addEventListener("change", function() {
     const selectedSubject = this.value;
-    dom.Remove();
+    dom.RemoveNode();
     retrieve.Data(selectedSubject);
   });
 }

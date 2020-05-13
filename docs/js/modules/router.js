@@ -1,19 +1,19 @@
 import retrieve from "./retrieve.js"
 import dom from "./dom.js"
 
-function Create() {
+function SetRoutes() {
   let detail = function(stringParam) {
     retrieve.Information(stringParam), console.log(stringParam);
   };
   let about = function() {
-    dom.Remove(), console.log("aboutpagina");
+    dom.RemoveNode(), console.log("aboutpagina");
   };
   let credit = function() {
-    dom.Remove(), console.log("creditpagina");
+    dom.RemoveNode(), console.log("creditpagina");
   };
 
   let notFound = function() {
-    dom.Remove()
+    dom.RemoveNode()
   }
 
   let routes = {
@@ -25,9 +25,8 @@ function Create() {
 
   let router = Router(routes);
   console.log("Director loaded");
-
   router.init();
 }
 
 
-export default {Create}
+export default {SetRoutes}
