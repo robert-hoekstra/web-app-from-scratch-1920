@@ -15,7 +15,7 @@ function Cards(myJson) {
 }
 
 function Items(parameter) {
-  fetch("https://swapi.dev/api/" + parameter)
+  fetch("httpss://swapi.dev/api/" + parameter)
     .then((response) => {
       return response.json();
     })
