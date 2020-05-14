@@ -70,9 +70,15 @@ Part of the course is to draw diagrams that explain all the modules and function
 ## Actor Diagram (updated 28-2-2020)
 ![actorDiagram (1)](https://user-images.githubusercontent.com/45421908/75520911-e9616800-5a06-11ea-93cf-12dc988f9acd.png)
 
+## Actor Diagram (updated 14-5-2020)
+
+
 
 ## Interaction Diagram (updated 28-2-2020)
 ![interactionDiagramDetail](https://user-images.githubusercontent.com/45421908/75522019-33e3e400-5a09-11ea-83d5-1d8ac4940966.png)
+
+## Interaction Diagram (updated 14-5-2020)
+![interactionDiagram2](https://user-images.githubusercontent.com/45421908/81937182-92296780-95f3-11ea-8430-27f453bfa40b.jpg)
 
 
 
@@ -86,7 +92,9 @@ Part of the course is to draw diagrams that explain all the modules and function
 * Renamed functions
 * changed all methods to start with lowercase (keeping camelcase)
 * Add sorting based on name
-* 
+* Add new interaction Diagram
+* Add going back button
+* Add instructions to wait untill options appear
 
 # License 
 MIT
