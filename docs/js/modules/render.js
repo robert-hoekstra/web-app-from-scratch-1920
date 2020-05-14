@@ -29,6 +29,7 @@ function items(parameter) {
       // console.log(sortedData)  // Waarom werkt dit modulair niet?
 
       
+      
 // Stackoverflow sorting array : https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript
       let sortedData = items.sort(function(a,b){
         if(a.name < b.name) { return -1; }
