@@ -15,7 +15,7 @@ function Cards(myJson) {
 }
 
 function Items(parameter) {
-  fetch("httpss://swapi.dev/api/" + parameter)
+  fetch("https://swapi.dev/api/" + parameter)
     .then((response) => {
       return response.json();
     })
@@ -28,13 +28,15 @@ function Items(parameter) {
       // let sortedData = items.sort(sort.byName());
       // console.log(sortedData)  // Waarom werkt dit modulair niet?
 
+      
+// Stackoverflow sorting array : https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript
       let sortedData = items.sort(function(a,b){
         if(a.name < b.name) { return -1; }
         if(a.name > b.name) { return 1; }
         return 0;
       })
 
-
+      // Flip array om in de juiste volgorde te schrijven naar DOM
       sortedData.reverse()
 
       console.log(sortedData)
