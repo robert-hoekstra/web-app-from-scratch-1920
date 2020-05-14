@@ -1,6 +1,6 @@
 import sort from "./sort.js";
 
-function Cards(myJson) {
+function cards(myJson) {
   localStorage.setItem("data", JSON.stringify(myJson));
   console.log("renderCards function: ", myJson);
   // Declare variables
@@ -14,7 +14,7 @@ function Cards(myJson) {
   });
 }
 
-function Items(parameter) {
+function items(parameter) {
   fetch("https://swapi.dev/api/" + parameter)
     .then((response) => {
       return response.json();
@@ -124,4 +124,4 @@ function Items(parameter) {
     });
 }
 
-export default { Cards, Items };
+export default { cards, items };

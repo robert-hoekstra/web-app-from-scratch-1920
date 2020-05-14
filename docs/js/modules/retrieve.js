@@ -2,20 +2,20 @@ import render from "./render.js";
 import dom from "./dom.js";
 
 
-function NavigationList() {
+function navigationList() {
   fetch("https://swapi.dev/api/")
     .then(response => {
       return response.json();
     })
-    .then(myJson => render.Cards(myJson))
+    .then(myJson => render.cards(myJson))
     // .then(renderCards => removeData(renderCards))
     .catch(err => {
       console.log(err);
     });
 }
 
-function Information(stringParam) {
-  dom.RemoveNode();
+function information(stringParam) {
+  dom.removeNode();
 
   collection.insertAdjacentHTML(
     "afterbegin",
@@ -51,13 +51,13 @@ function Information(stringParam) {
 
 }
 
-function Data(parameter) {
+function data(parameter) {
   if (localStorage.getItem("collection")) {
     console.log("local storage found");
   } else {
     console.log("local storage not found");
   }
-  render.Items(parameter);
+  render.items(parameter);
 }
 
-export default { NavigationList, Information, Data };
+export default { navigationList, information, data };

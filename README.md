@@ -81,6 +81,13 @@ Part of the course is to draw diagrams that explain all the modules and function
 [Gliphy API](https://developers.giphy.com/)
 [Director Routing](https://github.com/flatiron/director)
 
+# Changes
+* Renamed modules 
+* Renamed functions
+* changed all methods to start with lowercase (keeping camelcase)
+* Add sorting based on name
+* 
+
 # License 
 MIT
 

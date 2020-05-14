@@ -5,13 +5,13 @@ import dom from './modules/dom.js'
 startApp();
 
 function startApp() {
-  router.SetRoutes();
-  retrieve.NavigationList();
+  router.setRoutes();
+  retrieve.navigationList();
 
   let selection = document.getElementById("categorySelect");
   selection.addEventListener("change", function() {
     const selectedSubject = this.value;
-    dom.RemoveNode();
-    retrieve.Data(selectedSubject);
+    dom.removeNode();
+    retrieve.data(selectedSubject);
   });
 }
